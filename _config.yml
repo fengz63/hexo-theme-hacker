@@ -1,8 +1,8 @@
 menu:
-  Archives: /archives
-  Categories: /categories
-  About: /about
-  RSS: /atom.xml
+  归档: /archives
+  分类: /categories
+  关于: /about
+  订阅: /atom.xml
 
 # Table of contents | 文章目录
 toc:
@@ -32,7 +32,13 @@ leancloud_key:
 
 # disqus comment
 disqus: true
-disqus_shortname: kidhaibara
+giscus:
+  repo: fengz63/fengz63.github.io         # 你的仓库
+  repo_id: R_kgDONkh1Vg                   # giscus.app 生成的 repo ID
+  category: Q&A                           # 你创建的分类名
+  category_id: DIC_kwDONkh1Vs4Cuqet       # giscus.app 生成的 category ID
+  mapping: pathname                       # 建议用 pathname 或 slug
+  theme: light                            # 可选: light / dark / preferred_color_scheme
 
 # google analytics
 googleTrackId: G-J38N5N288S
