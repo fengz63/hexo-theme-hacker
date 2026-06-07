@@ -16,8 +16,8 @@ class ImageViewer {
         const overlay = document.createElement('div');
         overlay.className = 'image-viewer-overlay';
         overlay.innerHTML = `
+            <span class="image-viewer-close">&times;</span>
             <div class="image-viewer-container">
-                <span class="image-viewer-close">&times;</span>
                 <img class="image-viewer-img" src="" alt="">
                 <div class="image-viewer-caption"></div>
             </div>
@@ -33,12 +33,10 @@ class ImageViewer {
 
     bindEvents() {
         // 绑定文章图片点击事件
-        document.addEventListener('DOMContentLoaded', () => {
-            const images = document.querySelectorAll('.article-content img, .featured-media img');
-            images.forEach(img => {
-                img.addEventListener('click', (e) => {
-                    this.openViewer(e.target);
-                });
+        const images = document.querySelectorAll('.article-content img, .featured-media img');
+        images.forEach(img => {
+            img.addEventListener('click', (e) => {
+                this.openViewer(e.target);
             });
         });
 
