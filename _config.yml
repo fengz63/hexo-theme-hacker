@@ -31,7 +31,7 @@ leancloud_id:
 leancloud_key:
 
 # disqus comment
-disqus: true
+disqus: false
 giscus:
   repo: fengz63/fengz63.github.io         # 你的仓库
   repo_id: R_kgDONkh1Vg                   # giscus.app 生成的 repo ID
