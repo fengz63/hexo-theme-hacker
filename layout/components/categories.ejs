@@ -2,7 +2,7 @@
   <h2 class="article-title <% if (page.category){ %> category<% } else if (page.category){ %> category<% } %>"><%= page.title || config.title %></h2>
 
   <div class="categories-cloud">
-    <% site.categories.sort('name').map(function(category){  %>
+    <% site.categories.filter(function(category){ return category.length; }).sort('name').map(function(category){  %>
 			<span class="post-categories">
 	      <i class="icon-categories"></i>
 				<a href="<%= url_for(category.path) %>" title="<%= category.name %>" rel="<%= category.length %>"><%= category.name %></a>
@@ -11,7 +11,7 @@
   </div>
 
   <div class="archive">
-    <% site.categories.sort('name').map(function(category){  %>
+    <% site.categories.filter(function(category){ return category.length; }).sort('name').map(function(category){  %>
     <div class="archive-categories">
       <span class="post-categories">
         <i class="icon-categories"></i>
